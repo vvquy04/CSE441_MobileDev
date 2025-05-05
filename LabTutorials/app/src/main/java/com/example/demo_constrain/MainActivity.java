@@ -14,8 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText edtA, edtB, edtKQ;
-    Button btntong;
+    EditText edtA, edtB, edtResult;
+    Button btnSum;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +29,15 @@ public class MainActivity extends AppCompatActivity {
         });
         edtA = findViewById(R.id.edtA);
         edtB = findViewById(R.id.edtB);
-        edtKQ = findViewById(R.id.edtKQ);
-        btntong = findViewById(R.id.btntong);
-        btntong.setOnClickListener(new View.OnClickListener() {
+        edtResult = findViewById(R.id.edtResult);
+        btnSum = findViewById(R.id.btnSum);
+        btnSum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int A = Integer.parseInt(edtA.getText().toString());
                 int B = Integer.parseInt(edtB.getText().toString());
                 int C = A + B;
-                edtKQ.setText(C + "");
+                edtResult.setText(C + "");
             }
         });
     }
